@@ -11,7 +11,6 @@ void shuffle(int deck[][FACES])
    srand(time(NULL));
    for(;card<=CARDS;card++){
       do{
-         
          i=rand()%SUITS;
          j=rand()%FACES;
       }while(deck[i][j]!=0);

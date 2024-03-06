@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define SIZE 7
-void strange(const int b)//const是将形参值固定，这样被调用的函数就无法改变数组里面的值了。
+void strange(const int *b)//const是将形参值固定，这样被调用的函数就无法改变数组里面的值了。
 {
     b[0]=1;//这是错的。
 }
@@ -23,5 +23,20 @@ int main()
     int i;
     scanf("%d",&i);
     int a[i];//可以自定义数组长度了，这个顺序似乎不能变。
-    
+    int *p;
+
+   p=(int *)calloc(10,sizeof(int));//自定义数组的长度calloc函数
+   if(p==NULL){
+      printf("error\n");
+   }
+   else {
+      int i;
+      p[0]=1;
+      for(i=0;i<10;i++){
+         printf("%d",*(p+i));//直接打印
+      }
+   }
+   free(p);
+   p=NULL;
+   return 0;
 }

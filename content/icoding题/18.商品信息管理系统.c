@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "lab52.h" // 请不要删除本行头文件，否则检查不通过
 
 extern int CurrentCnt; // 请不要删除本行的全局变量声明，否则检查不通过
@@ -260,7 +261,7 @@ int main()
     init_list(&L);
     for(;;)
     {
-         printf("1.显示所有商品的信息\n");
+        printf("1.显示所有商品的信息\n");
         printf("2.修改某个商品的信息\n");
         printf("3.插入某个商品的信息\n");
         printf("4.删除某个商品的信息\n");

@@ -54,7 +54,7 @@ int main()
     char *string7="def";
     printf("The first occurrence of string7 is:%s\n",strstr(string6,string7));//strstr函数，查找后字符串在前字符串中第一次出现的地方，返回指针
     char string8[]="This is a sentence with 7 tokens";//似乎不能用*string8不知道为什么
-    char *tokenPtr=strtok(string8," ");//strtok函数，后面分隔符，在字符串中查找，遇到第一个分隔符，然后返回这一段字符串第一个字符的位置，分隔符处变为空指针。标号可以中途改变，这就是字符串的标号化，然后使用了这个函数后字符串会被改变，记得副本
+    char *tokenPtr=strtok(string8," ");//strtok函数，后面形参是不同分隔符，在字符串中查找，遇到第一个分隔符，然后返回这一段字符串第一个字符的位置，分隔符处变为空指针。标号可以中途改变，这就是字符串的标号化，然后使用了这个函数后字符串会被改变，记得副本
     while (tokenPtr!=NULL){
       printf("%s\n",tokenPtr);
       tokenPtr=strtok(NULL," ");
